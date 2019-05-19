@@ -15,12 +15,14 @@ When you have a program that generates this pattern, define a binding size
 = 8 and change the program so that it works for any size , outputting a grid
 of the given width and height. */
 
-var size = 8; //this is the variable setting
+//logic copied from stackoverflow
 
-var board = "";//this is the empty string we're going to add either ' ' , '#' or newline
+var size = 8; 
 
-for (var y = 0; y < size; y++) {   /*in the outer loop we add newline to seperate rows*/
-  for (var x = 0; x < size; x++) {/*every inner loop rappresents a line, and alternatively it's adding either ' ' or '#' to the string that's being populated*/
+var board = "";
+
+for (var y = 0; y < size; y++) {   
+  for (var x = 0; x < size; x++) {
     if ((x + y) % 2 == 0)
       board += " ";
     else
